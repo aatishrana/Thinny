@@ -7,14 +7,14 @@ permalink:	/blog/:title
 title:            Thinny
 tagline:          'blog'
 description:      'My personal blog.'
-url:              http://camporez.github.io
+url:              http://aatishrana.github.io
 baseurl:          
 commentsystem:    google
 disqus:           example
 
 author:
   name:           Aatish Rana
-  url:            https://aatishrana.com
+  url:            https://aatishrana.github.io
 
 paginate:         5
 
