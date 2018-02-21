@@ -13,8 +13,8 @@ commentsystem:    google
 disqus:           example
 
 author:
-  name:           Ian Brunelli
-  url:            https://google.com/+IanCamporezBrunelli
+  name:           Aatish Rana
+  url:            https://aatishrana.com
 
 paginate:         5
 
@@ -28,7 +28,7 @@ social:
     desc:         Follow me on twitter
 
   - icon:         github
-    url:          https://github.com/camporez
+    url:          https://github.com/aatishrana
     desc:         Fork me on github
 
   - icon:         googleplus-alt
@@ -47,8 +47,8 @@ menu:
     url:          /about
 
 copyright:
-  author:         Camporez
-  url:            http://camporez.github.io
+  author:         Aatish
+  url:            http://aatishrana.github.io
   type_title:     Some rights reserved
   type_url:       http://creativecommons.org/licenses/by-nc/2.5
 
