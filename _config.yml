@@ -23,20 +23,20 @@ icon:             /assets/images/icon.png
 cover:            /assets/images/cover.jpg
 
 social:
-  - icon:         twitter
-    url:          https://twitter.com/iancamporez
-    desc:         Follow me on twitter
+#  - icon:         twitter
+#    url:          https://twitter.com/iancamporez
+#    desc:         Follow me on twitter
 
   - icon:         github
     url:          https://github.com/aatishrana
     desc:         Fork me on github
 
   - icon:         googleplus-alt
-    url:          https://google.com/+IanCamporezBrunelli
+    url:          https://plus.google.com/u/0/108958764638006156141
     desc:         Add me on google+
 
   - icon:         feed
-    url:          http://camporez.github.io/atom.xml
+    url:          http://aatishrana.github.io/atom.xml
     desc:         Subscribe to my feed
 
 menu:
