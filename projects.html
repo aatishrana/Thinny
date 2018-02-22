@@ -3,11 +3,17 @@ layout: page
 title: Projects
 permalink: projects/
 ---
+<div id="post-list">
+    
 
-{% for post in paginator.posts %}
+    {% for entry in site.data.projects %}
     <div>
-        <span class="post-date">{{ post.date | date_to_long_string }}</span>
-        <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-        <p class="post-description">{% if post.quote %}{{ post.quote }}{% else %}{{ post.content | strip_html | truncatewords: 50 }}{% endif %}</p>
+        <span class="post-date"></span>
+        <h1><a href="{{ entry.href }}" target="_blank">{{ entry.title }}</a></h1>
+        <p class="post-description">{{ entry.description }}</p>
     </div>
-{% endfor %}
+    <br>
+    {% endfor %}
+
+
+</div>

@@ -23,10 +23,6 @@ icon:             /assets/images/icon.png
 cover:            /assets/images/cover.jpg
 
 social:
-#  - icon:         twitter
-#    url:          https://twitter.com/iancamporez
-#    desc:         Follow me on twitter
-
   - icon:         github
     url:          https://github.com/aatishrana
     desc:         Fork me on github
