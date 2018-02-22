@@ -4,13 +4,13 @@ markdown:	kramdown
 permalink:	/blog/:title
 
 # Setup
-title:            Thinny
+title:            Aatish
 tagline:          'blog'
 description:      'My personal blog.'
 url:              http://aatishrana.github.io
 baseurl:          
-commentsystem:    google
-disqus:           example
+#commentsystem:    google
+#disqus:           example
 
 author:
   name:           Aatish Rana
@@ -42,6 +42,9 @@ social:
 menu:
   - title:        Home
     url:          /
+
+  - title:        Projects
+    url:          /projects
 
   - title:        About
     url:          /about
