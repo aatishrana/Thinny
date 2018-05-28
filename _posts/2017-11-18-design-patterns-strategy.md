@@ -9,7 +9,7 @@ If you don't know what Polymorphism is I would encourage you to go through that 
 ### Done?
 I will assume you know what polymorphism is from now on.
 
-So in polymorphism or more specifically (subtype / inclusion) polymorphism our compiler allow us to write a method that takes a class T in it's argument, but will also work correctly if passed a subclass of T
+So in polymorphism or more specifically (subtype / inclusion) polymorphism our compiler allow us to write a method that takes a class T in its argument, but will also work correctly if passed a subclass of T
 
 example:
 
@@ -42,7 +42,7 @@ public class Lion implements Animal{
  
   @Override
   public void walk(){
-    // code of animal walking of 4 legs
+    // code of animal walking on 4 legs
   }
   
   @Override
@@ -62,7 +62,7 @@ public class Duck implements Animal{
  
   @Override
   public void walk(){
-    // code of animal walking of 2 legs
+    // code of animal walking on 2 legs
   }
   
   @Override
@@ -88,7 +88,7 @@ public class Monkey implements Animal{
  
   @Override
   public void walk(){
-    // code of animal walking of 2 legs
+    // code of animal walking on 2 legs
   }
   
   @Override
@@ -111,9 +111,47 @@ Moreover as we add more behavior to our animal class(swim, makeSound, etc), ther
 
 Naive programmers might start copy pasting code of similar behavior in each type, or worse they might create a super class with common behavior and start extending from them until they get stuck with maximum single inheritance feature of almost every major object oriented language (Java, c# etc) 
 
+example
+```java
+public class WalkingOnTwoFeet{
+  void walk(){
+    // code of animal walking on 2 legs
+  }
+}
+public class Vegetarian{
+  void eat(){
+    // code of animal eating veg food
+  }
+}
+public class NonFlyer{
+  void fly(){
+    // empty
+  }
+}
+```
+```java
+public class Monkey extends WalkingOnTwoFeet implements Animal{
+ 
+  @Override
+  public void walk(){
+    super.walk();
+  }
+  
+  @Override
+  public void eat(){
+    // can not extend Vegetarian
+  }
+
+  @Override
+  public void fly(){
+    // can not extend NonFlyer
+  }
+}
+```
+
 <br>
 
-#### In strategy pattern we take our behavior(walking, eating, flying) and define them in separate concrete classes and use them via an abstract interface. 
+### In strategy pattern we take our behavior(walking, eating, flying) and define them in separate concrete classes and use them via an abstract interface. 
 
 first we create interfaces for each of our behavior
 
@@ -137,14 +175,14 @@ for walking:
 ```java
 public class WalkingOnTwoFeet implements WalkingStrategy{
   void walk(){
-    // code of animal walking of 2 legs
+    // code of animal walking on 2 legs
   }
 }
 ```
 ```java
 public class WalkingOnFourFeet implements WalkingStrategy{
   void walk(){
-    // code of animal walking of 4 legs
+    // code of animal walking on 4 legs
   }
 }
 ```
