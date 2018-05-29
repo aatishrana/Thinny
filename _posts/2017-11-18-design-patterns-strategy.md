@@ -104,7 +104,7 @@ public class Monkey implements Animal{
 ```
 now monkey walks on 2 legs just like duck however it doesn't fly like lion and at the same time it is also vegetarian like the duck. 
 
-we can add more animals, like Dragon which can eat meat, fly high and walks on 2 legs.
+we can add more animals, like Dragon which can eat meat, fly high and walk on 2 legs.
 or add Chimpanzee which eats banana, can not fly and walk on 2 legs exactly same as Monkey.
 
 Moreover as we add more behavior to our animal class(swim, makeSound, etc), there are going be more combinations of behaviors.
@@ -250,7 +250,7 @@ public class Lion implements Animal{
   
   @Override
   public void eat(){
-    new NonVegetarian().walk();
+    new NonVegetarian().eat();
   }
 
   @Override
@@ -298,7 +298,7 @@ public class Lion implements Animal{
   
   @Override
   public void eat(){
-    this.eatingStrategy.walk();
+    this.eatingStrategy.eat();
   }
 
   @Override
