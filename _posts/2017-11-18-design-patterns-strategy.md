@@ -112,6 +112,8 @@ Moreover as we add more behavior to our animal class(swim, makeSound, etc), ther
 Naive programmers might start copy pasting code of similar behavior in each type, or worse they might create a super class with common behavior and start extending from them until they get stuck with maximum single inheritance feature of almost every major object oriented language (Java, c# etc) 
 
 example
+
+creating base classes for reuse
 ```java
 public class WalkingOnTwoFeet{
   void walk(){
@@ -129,6 +131,8 @@ public class NonFlyer{
   }
 }
 ```
+
+not able to use them
 ```java
 public class Monkey extends WalkingOnTwoFeet implements Animal{
  
@@ -352,7 +356,7 @@ public class Duck implements Animal{
   
   @Override
   public void eat(){
-    this.eatingStrategy.walk();
+    this.eatingStrategy.eat();
   }
 
   @Override
