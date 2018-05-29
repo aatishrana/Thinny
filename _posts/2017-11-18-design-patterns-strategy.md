@@ -380,6 +380,9 @@ public class Application{
 
 #### That is it. That's the strategy pattern
 
+#### Conclusion
+In the strategy pattern,  method of a class is defined as a separate interface and concrete implementation of that interface is used depending on our need.
+
 <br>
 
 #### Ps.
