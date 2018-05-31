@@ -332,7 +332,11 @@ Add ons
 public class Cheese extends AddOn{
   private final String addOnDesc = " with cheese";
   private final int addOnCost = 10;
-
+  
+  public Cheese(FoodItem item){
+    super(item);
+  }
+  
   @Override
   String description(){
     return super.description() + this.addOnDesc;
@@ -349,7 +353,11 @@ public class Cheese extends AddOn{
 public class Chicken extends AddOn{
   private final String addOnDesc = " with chicken";
   private final int addOnCost = 27;
-
+  
+  public Chicken(FoodItem item){
+    super(item);
+  }
+  
   @Override
   String description(){
     return super.description() + this.addOnDesc;
@@ -366,7 +374,11 @@ public class Chicken extends AddOn{
 public class Tomato extends AddOn{
   private final String addOnDesc = " with tomato";
   private final int addOnCost = 13;
-
+  
+  public Tomato(FoodItem item){
+    super(item);
+  }
+  
   @Override
   String description(){
     return super.description() + this.addOnDesc;
