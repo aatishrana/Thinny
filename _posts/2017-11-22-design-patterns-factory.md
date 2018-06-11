@@ -171,13 +171,32 @@ public class StoryGameplayFactory implements GameplayFactory{
 }
 ```
 
+And now we can use different factories based on what user does.
+
+```java
+public class App{
+  public static void main(String[] args){
+    // mission started
+    GameplayFactory factory = new StoryGameplayFactory();
+    Gameplay gamePlay = factory.getGameplay();
+    gamePlay.play();
+    
+    //..
+    // user just roaming around
+    factory = new RandomGameplayFactory();
+    gamePlay = factory.getGameplay();
+    gamePlay.play();
+  }
+}
+```
+
 #### That is it. That’s the factory method pattern.
 
 <br>
 
 #### Conclusion
 
-The factory method pattern defines an interface(GameplayFactory) for creating an object but lets subclasses(RandomGameplayFactory, StoryGameplayFactory) decide which class(SunnyWeatherGameplay, RainyWeatherGameplay) to instantiate. Factory method let the class defer instantiation to subclasses.
+The factory method pattern defines an interface(*GameplayFactory*) for creating an object but lets subclasses(*RandomGameplayFactory, StoryGameplayFactory*) decide which class(*SunnyWeatherGameplay, RainyWeatherGameplay*) to instantiate. Factory method let the class defer instantiation to subclasses.
 
 <br>
 
