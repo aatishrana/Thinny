@@ -63,7 +63,7 @@ public class App{
 }
 ```
 
-Now, this is very basic code, this type of implementation would never be used in a real world project. To improve this we can make an abstract FoodItem and extend different dishes from it which would be like this.
+Now, this is very basic code, this type of implementation would never be used in a real-world project. To improve this we can make an abstract FoodItem and extend different dishes from it which would be like this.
 
 ```java
 public interface FoodItem{
@@ -114,7 +114,7 @@ public class App{
 
 This is a better than before. There is no inconsistency in method names for every food item, all the necessary methods and data are present and we can use the abstract FoodItem interface for grouping and sending of data as well.
 
-#### But in real world, things ain't that simple.
+#### But in the real world, things ain't that simple.
 
 Just a Pizza class is not sufficient enough, real pizza has subcomponents like cheese, veg toppings, non-veg toppings, tomato sauce, bread base etc. So does the Burger, Pasta, so on and so forth.
 
@@ -199,7 +199,7 @@ public class CheesePizza implements FoodItem{
 public class VegCheesePizza implements FoodItem{
   @Override
   void prepare(){
-    // prepration code for veg cheese pizza
+    // preparation code for veg cheese pizza
   }
   
   @Override
@@ -218,7 +218,7 @@ public class VegCheesePizza implements FoodItem{
 public class NonVegPizza implements FoodItem{
   @Override
   void prepare(){
-    // prepration code for non veg pizza
+    // preparation code for non veg pizza
   }
   
   @Override
@@ -250,7 +250,7 @@ The component will provide us the common functionality of our base entity(exampl
 
 > **The magic is, our decorator is itself a component and has a component**
 
-Let us see an example.
+Let's see an example.
 
 <br>
 
@@ -416,4 +416,4 @@ As you can see creating a new combination is very simple now, all we have to do 
 
 #### Conclusion
 
-The decorator pattern attaches additional responsibility to an object dynamically.
+The decorator pattern attaches additional responsibility(*hasCheese, vegTopping*) to an object(*pizza*) dynamically.
