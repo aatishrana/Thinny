@@ -47,10 +47,10 @@ class Car{
 }
 ```
 
-Unlike first example, in this example rather then creating class Engine's instance our self, we are given an instance through constructor.
+Unlike the first example, in this example rather than creating class Engine's instance our self, we are given an instance through the  constructor.
 
 ### That's it
-In essence the concept is that simple, like Hollywood Principle 
+In essence, the concept is that simple, like Hollywood Principle 
 
 > *Don't call us, we'll call you*
 > 
@@ -77,7 +77,7 @@ So how does D.I make loose coupling.
 
 So now we can easily create our classes and later decide if they are suppose to be used together.
 
-lets see another example
+let's see another example
 
 ```java
 import Engine;
@@ -107,7 +107,7 @@ class Truck{
 
 ```
 
-In the above example we are reusing our Engine class for both Car and Truck. We could have very easily created new instances of engine inside our constructor, but imagine if object creation code of Engine class was changed.
+In the above example, we are reusing our Engine class for both Car and Truck. We could have very easily created new instances of the engine inside our constructor, but imagine if object creation code of Engine class was changed.
 
 from this:
 
@@ -135,7 +135,7 @@ Not only do we have to change our code in Car and Truck class, but anywhere else
 
 <br/>
 
-Better approach is to let Car class be responsible only for it's own functionality rather than the responsibility of creating an Engine. 
+A better approach is to let Car class be responsible only for its own functionality rather than the responsibility of creating an Engine. 
 
 Injecting would also help us test our Car class
 ```java
@@ -165,7 +165,7 @@ interface Engine{
 	...
 }
 ```
-and some of it's concrete implementation
+And some of its concrete implementation
 ```java
 class PetrolEngine implements Engine{
 	void turnOn(){
@@ -189,7 +189,7 @@ class DieselEngine implements Engine{
 }
 ```
 
-then we can use our abstract engine in our Car class
+Then we can use our abstract engine in our Car class
 
 ```java
 import Engine;
@@ -205,7 +205,7 @@ class Car{
 }
 ```
 
-but which real implementation of engine will be used in Car, will be decided when we create our Car and run our program
+But which real implementation of the engine will be used in Car, will be decided when we create our Car and run our program
 
 ```java
 class App{
@@ -220,7 +220,7 @@ class App{
 ```
 
 we can do this in Truck class and all other classes which uses Engine.
-In future if we create a new type of engine "SolarEngine" we can easily swap it without worrying of changes in any of our Vehicle classes.
+In future, if we create a new type of engine "SolarEngine" we can easily swap it without worrying about changes in any of our Vehicle classes.
 
 <br/>
 
@@ -237,7 +237,7 @@ In future if we create a new type of engine "SolarEngine" we can easily swap it 
 <br/><br/>
 
 ## P.S.
-With dependency injection our implementation code is a lot clean and easy, however we have polluted our calling code
+With dependency injection our implementation code is a lot clean and easy, however, we have polluted our calling code
 ```java
 class App{
 	public static void main(String[] args){
@@ -249,6 +249,6 @@ class App{
 	}
 }
 ```
-This has created a lot of boilerplate code, which doesn't do anything but waste a lot of developer's time. This boilerplate also have to be created in right order otherwise it won't work. This can easily become very complex and hard to maintain if we are working on a large project. 
+This has created a lot of boilerplate code, which doesn't do anything but waste a lot of developer's time. This boilerplate also has to be created in right order otherwise it won't work. This can easily become very complex and hard to maintain if we are working on a large project. 
 
 To avoid this, we can use a D.I library, which we will discuss in future posts.
