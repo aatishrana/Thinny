@@ -5,8 +5,8 @@ permalink:	/blog/:title
 
 # Setup
 title:            Aatish
-tagline:          'blog'
-description:      'My personal blog.'
+tagline:          ''
+description:      ''
 url:              http://aatishrana.github.io
 baseurl:          
 #commentsystem:    google
@@ -15,6 +15,7 @@ baseurl:
 author:
   name:           Aatish Rana
   url:            https://aatishrana.github.io
+  email:          aatishranawork@gmail.com
 
 paginate:         5
 
