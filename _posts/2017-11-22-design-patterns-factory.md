@@ -196,7 +196,7 @@ public class App{
 
 #### Conclusion
 
-The factory method pattern defines an interface(*GameplayFactory*) for creating an object but lets subclasses(*RandomGameplayFactory, StoryGameplayFactory*) decide which class(*SunnyWeatherGameplay, RainyWeatherGameplay*) to instantiate. Factory method let the class defer instantiation to subclasses.
+The factory method pattern defines an interface(*GameplayFactory*) for creating an object(*Gameplay*) but lets subclasses(*RandomGameplayFactory, StoryGameplayFactory*) decide which class(*SunnyWeatherGameplay, RainyWeatherGameplay*) to instantiate. Factory method let the class defer instantiation to subclasses.
 
 <br>
 
